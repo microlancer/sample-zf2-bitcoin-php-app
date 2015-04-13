@@ -13,13 +13,29 @@
     "config": {
         "vendor-dir": "vendor"
     },
+    "repositories": {
+        "bitcoin-php": {
+            "type": "package",
+            "package": {
+                "name": "thorie7912/bitcoin-php",
+                "version": "1.0.0",
+                "source": {
+                    "url": "https://github.com/thorie7912/bitcoin-php",
+                    "type": "git",
+                    "reference": "1f9e946e52"
+                }
+            }
+        }
+    },
     "require": {
         "php": ">=5.3.3",
-        "zendframework/zendframework": "2.3.1"
+        "zendframework/zendframework": "2.3.1",
+        "thorie7912/bitcoin-php": "*"
     },
     "autoload": {
         "psr-0": {
-            "Zend\\": "library/"
+            "Zend\\": "library/",
+            "Bitcoin": "vendor/thorie7912/bitcoin-php/src"
         }
     }
 }
