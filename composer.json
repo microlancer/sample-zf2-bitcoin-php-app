@@ -22,7 +22,7 @@
                 "source": {
                     "url": "https://github.com/thorie7912/bitcoin-php",
                     "type": "git",
-                    "reference": "1f9e946e52"
+                    "reference": "master"
                 }
             }
         }

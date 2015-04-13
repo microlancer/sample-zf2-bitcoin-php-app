@@ -1,7 +1,6 @@
 <?php
 return array(
     'modules' => array(
-        'Bitcoin\Client',
         'MyApp'
     ),
     'module_listener_options' => array(

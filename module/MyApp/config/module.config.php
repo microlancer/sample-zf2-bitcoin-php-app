@@ -7,7 +7,7 @@ return array(
                 'type' => 'Zend\Mvc\Router\Http\Segment',
                 'may_terminate' => true,
                 'options' => array(
-                    'route' => '/:controller',
+                    'route' => '/:controller[/:action]',
                     'constraints' => array(
                         'controller' => 'index',
                         'action' => 'index',
@@ -15,6 +15,18 @@ return array(
                     'defaults' => array(
                         '__NAMESPACE__' => 'MyApp\Controller',
                         'controller' => 'index',
+                        'action' => 'index',
+                    ),
+                ),
+            ),
+            'root' => array(
+                'type' => 'Zend\Mvc\Router\Http\Segment',
+                'may_terminate' => true,
+                'options' => array(
+                    'route' => '',
+                    'defaults' => array(
+                        '__NAMESPACE__' => 'MyApp\Controller',
+                        'controller' => 'MyApp\Controller\Index',
                         'action' => 'index',
                     ),
                 ),
@@ -48,10 +60,7 @@ return array(
             'alias' => array(
                 'json-format'  => 'MyApp\Format\Json',
                 'image-format' => 'MyApp\Format\Image',
-            )
-        ),
-        'JsonSchema\Validator' => array(
-            'shared' => false,
+            ),
         ),
     ),
     'controllers' => array(
@@ -66,12 +75,10 @@ return array(
         'not_found_template' => 'error/404',
         'exception_template' => 'error/index',
         'template_map' => array(
-            'apps/index/index' => __DIR__ . '/../view/apps/index/index.phtml',
             'layout/layout' => __DIR__ . '/../view/layout/layout.phtml',
-            'main/index/index' => __DIR__ . '/../view/main/index/index.phtml',
+            'myapp/index/index' => __DIR__ . '/../view/myapp/index/index.phtml',
             'error/404' => __DIR__ . '/../view/error/404.phtml',
             'error/index' => __DIR__ . '/../view/error/index.phtml',
-            'docs/index/index' => __DIR__ . '/../view/docs/index/index.phtml',
         ),
         'template_path_stack' => array(
             __DIR__ . '/../view',

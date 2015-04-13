@@ -2,6 +2,9 @@
 
 namespace MyApp;
 
+use \MyApp\Controller\IndexController;
+use \Zend\Mvc\MvcEvent;
+
 class Module
 {
     /**
