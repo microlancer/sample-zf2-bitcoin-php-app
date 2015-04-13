@@ -2,6 +2,8 @@
 
 A sample application that uses Zend Framework 2 and the Bitcoin-PHP library.
 
+See the ZF2 wrapper module for bitcoin-php here: https://github.com/thorie7912/bitcoin-php
+
 ## Install using composer
 
 ```
